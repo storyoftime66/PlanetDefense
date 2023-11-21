@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1byilny4rbpp"]
+
+[ext_resource type="PackedScene" uid="uid://cm1ta2xtv80c0" path="res://celestial_bodies/celestial_body_base.tscn" id="1_xyvvk"]
+[ext_resource type="Texture2D" uid="uid://c7c7tbb1adw01" path="res://celestial_bodies/earth/Earth32x32.png" id="2_1akrv"]
+[ext_resource type="Script" path="res://celestial_bodies/earth/earth.gd" id="2_ohxw8"]
+
+[node name="Earth" instance=ExtResource("1_xyvvk")]
+collision_layer = 1
+collision_mask = 4
+mass = 100000.0
+freeze = true
+script = ExtResource("2_ohxw8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_1akrv")

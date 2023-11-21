@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://4uaykv5afc8s"]
+
+[ext_resource type="PackedScene" uid="uid://c1byilny4rbpp" path="res://celestial_bodies/earth/earth.tscn" id="1_upg4w"]
+[ext_resource type="PackedScene" uid="uid://cb8i4lxo65swf" path="res://celestial_bodies/moon/moon.tscn" id="2_8k7tg"]
+
+[node name="main" type="Node2D"]
+
+[node name="Earch" parent="." instance=ExtResource("1_upg4w")]
+position = Vector2(960, 540)
+collision_mask = 1
+
+[node name="Moon2" parent="." instance=ExtResource("2_8k7tg")]
+position = Vector2(763, 842)
+linear_velocity = Vector2(0, -120)
+
+[node name="Moon3" parent="." instance=ExtResource("2_8k7tg")]
+position = Vector2(537, 667)
+linear_velocity = Vector2(-80, -40)
+
+[node name="Moon4" parent="." instance=ExtResource("2_8k7tg")]
+position = Vector2(1323, 860)
+linear_velocity = Vector2(60, -60)
+
+[node name="Moon" parent="." instance=ExtResource("2_8k7tg")]
+position = Vector2(1102, 334)
+linear_velocity = Vector2(80, 0)

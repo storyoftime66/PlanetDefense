@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1byilny4rbpp"]
+
+[ext_resource type="PackedScene" uid="uid://cm1ta2xtv80c0" path="res://celestial_bodies/celestial_body_base.tscn" id="1_xyvvk"]
+[ext_resource type="Texture2D" uid="uid://c7c7tbb1adw01" path="res://celestial_bodies/earth/Earth32x32.png" id="2_fklsx"]
+[ext_resource type="Script" path="res://celestial_bodies/celestial_body_base.gd" id="2_ommxr"]
+
+[sub_resource type="GDScript" id="GDScript_l8vjs"]
+script/source = "class_name CelestialBodyBase extends RigidBody2D
+
+
+func _ready():
+	pass
+
+func _enter_tree():
+	CelestialBodyManager.register_celestial_body(self)
+
+func _exit_tree():
+	CelestialBodyManager.unregister_celestial_body(self)
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lwyxj"]
+radius = 27.0185
+
+[node name="Earth" instance=ExtResource("1_xyvvk")]
+script = SubResource("GDScript_l8vjs")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_lwyxj")
+script = ExtResource("2_ommxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_fklsx")
