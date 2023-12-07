@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://celestial_bodies/celestial_body_base.gd" id="1_ejf0w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6mewb"]
-radius = 26.0192
+radius = 17.0
 
-[node name="CelestialBodyBase" type="RigidBody2D"]
+[node name="CelestialBody" type="RigidBody2D"]
 collision_layer = 0
 collision_mask = 0
 mass = 10000.0

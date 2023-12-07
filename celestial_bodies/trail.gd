@@ -1,22 +1,22 @@
-extends Line2D
+extends Node2D
 
 
 @export var point_count := 30
 @onready var parent = get_parent()
 var accumulation := 0.0
 const point_interval = 0.1
+@onready var line2d := $Line2D as Line2D
 
 func _ready():
-	clear_points()
+	line2d.clear_points()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	accumulation += delta
 	
 	if accumulation >= point_interval:
 		accumulation -= point_interval
 		
-		add_point(parent.global_position)
-		if get_point_count() > point_count:
-			remove_point(0)
+		line2d.add_point(parent.global_position)
+		if line2d.get_point_count() > point_count:
+			line2d.remove_point(0)

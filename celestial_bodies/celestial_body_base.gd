@@ -1,7 +1,7 @@
 class_name CelestialBodyBase extends RigidBody2D
 
 # 天体类型
-enum { NONE, PLANET, SATELLITE }
+enum { NONE, PLANET, SATELLITE, ASTEROID }
 
 var health := 100
 var type = NONE

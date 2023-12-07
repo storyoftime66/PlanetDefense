@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvqgnekfuba8l"]
+
+[ext_resource type="Script" path="res://celestial_bodies/trail.gd" id="1_k38dg"]
+
+[sub_resource type="Curve" id="Curve_0ww7i"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.518828, 0.905263), 0.664548, 0.664548, 0, 0, Vector2(1, 1), 3.56138e-07, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_bh0ea"]
+colors = PackedColorArray(0.0666667, 0.0941176, 0.152941, 1, 0.779291, 0.779291, 0.779291, 1)
+
+[node name="Trail" type="Node2D"]
+show_behind_parent = true
+light_mask = 2
+visibility_layer = 4
+script = ExtResource("1_k38dg")
+
+[node name="Line2D" type="Line2D" parent="."]
+show_behind_parent = true
+top_level = true
+z_index = -1
+width = 6.0
+width_curve = SubResource("Curve_0ww7i")
+default_color = Color(0.713726, 0.713726, 0.713726, 1)
+gradient = SubResource("Gradient_bh0ea")
+antialiased = true

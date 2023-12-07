@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbk27x1u6l552"]
+
+[ext_resource type="Script" path="res://celestial_bodies/orbit.gd" id="1_uodlj"]
+
+[node name="Orbit" type="Line2D"]
+top_level = true
+width = 1.0
+default_color = Color(0.572549, 0.647059, 0.8, 0.721569)
+antialiased = true
+script = ExtResource("1_uodlj")

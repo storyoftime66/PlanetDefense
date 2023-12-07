@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://by3i7mqaex6dd"]
+
+[ext_resource type="PackedScene" uid="uid://cm1ta2xtv80c0" path="res://celestial_bodies/celestial_body_base.tscn" id="1_edx8h"]
+[ext_resource type="Script" path="res://celestial_bodies/asteroids/asteroid_base.gd" id="2_8eo3r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdy8e"]
+radius = 17.0
+
+[node name="AsteroidBase" instance=ExtResource("1_edx8h")]
+script = ExtResource("2_8eo3r")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_kdy8e")
