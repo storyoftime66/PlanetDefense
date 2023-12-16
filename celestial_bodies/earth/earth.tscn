@@ -8,7 +8,7 @@
 radius = 27.0185
 
 [node name="Earth" instance=ExtResource("1_xyvvk")]
-collision_layer = 1
+collision_layer = 9
 collision_mask = 4
 mass = 100000.0
 freeze = true

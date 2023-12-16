@@ -1,10 +1,14 @@
-extends Line2D
+class_name Orbit extends Line2D
 
 
+# 椭圆参数
 @export var a_radius := 200.0
 @export var b_radius := 150.0
 @export var point_count := 100
 @export var degree := 0.0
+
+# 所属天体
+var body: SatelliteBase = null
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,3 +50,4 @@ func draw_orbit() -> void:
 		add_point(point)
 	
 	rotation_degrees = degree
+

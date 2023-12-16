@@ -6,6 +6,7 @@ class_name SatelliteBase extends "res://celestial_bodies/celestial_body_base.gd"
 var central_body: CelestialBodyBase
 
 
+
 func _init():
 	type = SATELLITE
 
